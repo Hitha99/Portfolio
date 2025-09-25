@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hitha Magadi Vijayanand · Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      color-scheme: dark;
+      --bg:#070a1a;
+      --g1:#06b6d4;  /* cyan */
+      --g2:#6366f1;  /* indigo */
+      --g3:#f472b6;  /* pink */
+    }
+    body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    /* Soft gradient glow */
+    body::before{
+      content:""; position:fixed; inset:-20%;
+      background:
+        radial-gradient(45% 35% at 20% 10%, color-mix(in srgb, var(--g1) 18%, transparent) 0%, transparent 60%),
+        radial-gradient(40% 30% at 80% 20%, color-mix(in srgb, var(--g2) 16%, transparent) 0%, transparent 60%),
+        radial-gradient(35% 40% at 50% 80%, color-mix(in srgb, var(--g3) 14%, transparent) 0%, transparent 60%);
+      filter: blur(42px); z-index:0; pointer-events:none;
+    }
+    .grad-text{background-image:linear-gradient(90deg,var(--g1),var(--g2),var(--g3)); -webkit-background-clip:text; background-clip:text; color:transparent;}
+    .chip{font-size:.75rem; line-height:1; padding:.4rem .55rem; border-radius:9999px; border:1px solid rgb(255 255 255 /.08)}
+    .active-link{color:rgb(56 189 248); font-weight:600}
+    /* Reveal */
+    .reveal{opacity:0; transform:translateY(12px); transition:opacity .5s ease, transform .5s ease}
+    .reveal.show{opacity:1; transform:none}
+  </style>
+</head>
+<body class="bg-[var(--bg)] text-white/90 min-h-screen relative">
+
+  <!-- SHELL -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 relative z-10">
+    <div class="grid lg:grid-cols-[320px,1fr] gap-8">
+
+      <!-- LEFT SIDEBAR (fixed on lg) -->
+      <aside class="lg:sticky lg:top-8 self-start">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="flex items-center gap-4">
+            <!-- optional avatar circle -->
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--g1)]/30 via-[var(--g2)]/30 to-[var(--g3)]/30 ring-1 ring-white/10"></div>
+            <div>
+              <h1 class="text-xl font-extrabold tracking-tight">Hitha Magadi Vijayanand</h1>
+              <p class="text-white/70 text-sm">Software Development Engineer</p>
+            </div>
+          </div>
+
+          <p class="mt-4 text-sm text-white/80">
+            I build reliable, scalable systems and pragmatic ML. Open to roles: SWE · Distributed Systems · ML/Infra.
+          </p>
+
+          <nav class="mt-6 space-y-1 text-sm" id="sideNav">
+            <a href="#about" class="block px-3 py-2 rounded-xl hover:bg-white/5">About</a>
+            <a href="#experience" class="block px-3 py-2 rounded-xl hover:bg-white/5">Experience</a>
+            <a href="#projects" class="block px-3 py-2 rounded-xl hover:bg-white/5">Projects</a>
+            <a href="#skills" class="block px-3 py-2 rounded-xl hover:bg-white/5">Skills</a>
+            <a href="#education" class="block px-3 py-2 rounded-xl hover:bg-white/5">Education</a>
+            <a href="#achievements" class="block px-3 py-2 rounded-xl hover:bg-white/5">Achievements</a>
+            <a href="#whyhire" class="block px-3 py-2 rounded-xl hover:bg-white/5">Why Hire Me</a>
+            <a href="#contact" class="block px-3 py-2 rounded-xl hover:bg-white/5">Contact</a>
+          </nav>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            <a href="mailto:hithavgowder@gmail.com" class="chip hover:border-cyan-400/40">Email</a>
+            <a href="https://github.com/Hitha99" target="_blank" class="chip hover:border-indigo-400/40">GitHub</a>
+            <a href="https://www.linkedin.com/in/hitha-magadi-vijayanand-68143b1b5/" target="_blank" class="chip hover:border-pink-400/40">LinkedIn</a>
+            <a href="./Hitha_Magadi_Vijayanand.pdf" download class="chip hover:border-cyan-400/40">Résumé</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT CONTENT -->
+      <main class="space-y-16 lg:space-y-24">
+
+        <!-- ABOUT -->
+        <section id="about" class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight grad-text">About</h2>
+          
+          <div class="mt-6 grid md:grid-cols-3 gap-8 items-center">
+            <!-- Profile Photo -->
+            <div class="md:col-span-1 flex justify-center">
+              <img src="IMG_2637.jpg" alt="Hitha Magadi Vijayanand" 
+                   class="w-40 h-40 rounded-full ring-4 ring-sky-400/50 shadow-lg shadow-black/30 object-cover">
+            </div>
+            
+            <!-- About Text -->
+            <div class="md:col-span-2">
+              <p class="mt-3 text-white/80 max-w-3xl">
+                I am a <span class="text-white font-semibold">Software Developer</span> and 
+                <span class="text-white font-semibold">graduate student in Computer Science at Texas A&amp;M University</span>, 
+                with over two years of experience building scalable backend systems and cloud-native applications. 
+                At <span class="text-white">J.P. Morgan Chase</span>, I focused on large-scale system modernization, 
+                AWS-driven infrastructure optimization, and the design of efficient data pipelines and search solutions.
+              </p>
+              <p class="mt-4 text-white/80 max-w-3xl">
+                My strengths lie in <span class="text-white">backend engineering, distributed systems, cloud computing, 
+                and data-intensive applications</span>. I am skilled in Java, Spring Boot, AWS, and Elasticsearch, with a strong foundation in 
+                system design, performance tuning, and reliability engineering.
+              </p>
+              <p class="mt-4 text-white/80 max-w-3xl">
+                Beyond industry experience, I am passionate about <span class="text-white">AI, ML, NLP, and Generative AI</span>. 
+                I have taken graduate-level courses in AI, ML, NLP, and GenAI, and actively explore topics such as 
+                retrieval-augmented generation (RAG), multimodal learning, and deep learning for time-series and image data. 
+                My interests extend to applied research in optimization, fairness, and data mining, where I enjoy 
+                developing innovative, data-driven solutions to complex real-world problems.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE (timeline style) -->
+        <section id="experience" class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight grad-text">Experience</h2>
+          <ol class="relative mt-8 border-s border-white/15">
+            <!-- item -->
+            <li class="ms-6 pb-10 last:pb-0">
+              <span class="absolute -start-2.5 mt-1.5 size-5 rounded-full bg-gradient-to-br from-[var(--g1)] to-[var(--g2)] ring-2 ring-[var(--bg)]"></span>
+              <div class="rounded-2xl p-5 border border-white/10 bg-white/5 hover:ring-2 hover:ring-[var(--g1)]/50 transition">
+                <div class="flex items-baseline gap-4">
+                  <h3 class="text-lg md:text-xl font-semibold flex-1 min-w-0 truncate">Software Development Engineer · Student Assistant</h3>
+                  <span class="text-xs text-white/70 shrink-0 whitespace-nowrap">Aug 2025 – Present · College Station, TX</span>
+                </div>
+                <p class="mt-1 text-white/80">Texas A&M Engineering Department</p>
+                <ul class="mt-3 space-y-2 text-white/80 list-disc ps-5">
+                  <li>Production WebRTC video chat with E2E encryption & Stripe; 100+ concurrent users.</li>
+                  <li>Automated CI/CD with ~99% deployment success and faster releases.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="ms-6 pb-10">
+              <span class="absolute -start-2.5 mt-1.5 size-5 rounded-full bg-gradient-to-br from-[var(--g2)] to-[var(--g3)] ring-2 ring-[var(--bg)]"></span>
+              <div class="rounded-2xl p-5 border border-white/10 bg-white/5 hover:ring-2 hover:ring-[var(--g2)]/50 transition">
+                <div class="flex items-baseline gap-4">
+                  <h3 class="text-lg md:text-xl font-semibold flex-1 min-w-0 truncate">Software Development Engineer&nbsp;2</h3>
+                  <span class="text-xs text-white/70 shrink-0 whitespace-nowrap">Jan 2024 – Jul 2024 · Bengaluru, India</span>
+                </div>
+                <p class="mt-1 text-white/80">JPMorgan Chase</p>
+                <ul class="mt-3 space-y-2 text-white/80 list-disc ps-5">
+                  <li>Migrated microservices to AWS ECS; cut deployment time by ~70%.</li>
+                  <li>Event-driven notifications with RabbitMQ; 15M+ events/month.</li>
+                  <li>Interactive dashboards for 5+ teams, improving decisions.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="ms-6 pb-10">
+              <span class="absolute -start-2.5 mt-1.5 size-5 rounded-full bg-gradient-to-br from-[var(--g3)] to-[var(--g1)] ring-2 ring-[var(--bg)]"></span>
+              <div class="rounded-2xl p-5 border border-white/10 bg-white/5 hover:ring-2 hover:ring-[var(--g3)]/50 transition">
+                <div class="flex items-baseline gap-4">
+                  <h3 class="text-lg md:text-xl font-semibold flex-1 min-w-0 truncate">Software Development Engineer&nbsp;1</h3>
+                  <span class="text-xs text-white/70 shrink-0 whitespace-nowrap">Sep 2021 – Dec 2023 · Bengaluru, India</span>
+                </div>
+                <p class="mt-1 text-white/80">JPMorgan Chase</p>
+                <ul class="mt-3 space-y-2 text-white/80 list-disc ps-5">
+                  <li>Spring Boot 2→3 & Java 8→17 upgrades; performance + maintainability.</li>
+                  <li>MarkLogic → S3 + DynamoDB; −80% infra cost for 1,500+ users.</li>
+                  <li>OpenSearch synonyms; +50% relevance; 1M+ records, 40% faster queries.</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="ms-6">
+              <span class="absolute -start-2.5 mt-1.5 size-5 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 ring-2 ring-[var(--bg)]"></span>
+              <div class="rounded-2xl p-5 border border-white/10 bg-white/5 hover:ring-2 hover:ring-emerald-400/50 transition">
+                <div class="flex items-baseline gap-4">
+                  <h3 class="text-lg md:text-xl font-semibold flex-1 min-w-0 truncate">Software Engineering Intern</h3>
+                  <span class="text-xs text-white/70 shrink-0 whitespace-nowrap">Feb 2021 – Aug 2021 · Bengaluru, India</span>
+                </div>
+                <p class="mt-1 text-white/80">JPMorgan Chase</p>
+                <ul class="mt-3 space-y-2 text-white/80 list-disc ps-5">
+                  <li>Automated report generation via Outlook & Control-M.</li>
+                  <li>100% method coverage (JUnit); load tests with JMeter.</li>
+                  <li>APIs for Elasticsearch index management.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight grad-text">Projects</h2>
+          <div class="mt-8 grid md:grid-cols-3 gap-6">
+            <!-- 1 -->
+            <article class="rounded-3xl p-6 border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:shadow-xl ring-1 ring-transparent hover:ring-2 hover:ring-rose-400/60">
+              <h3 class="text-lg font-semibold">Cause Analysis of Accidents</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="chip bg-emerald-500/10 text-emerald-300 border-emerald-400/20">Python</span>
+                <span class="chip bg-sky-500/10 text-sky-300 border-sky-400/20">Apriori</span>
+              </div>
+              <p class="mt-3 text-white/80">Apriori-style rule mining to discover risk factor patterns in traffic accidents.</p>
+              <a class="mt-4 inline-block text-sm text-cyan-300 hover:underline" target="_blank" href="https://github.com/Hitha99/Cause-analysis-of-accidents">Repository →</a>
+            </article>
+            <!-- 2 -->
+            <article class="rounded-3xl p-6 border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:shadow-xl ring-1 ring-transparent hover:ring-2 hover:ring-amber-400/60">
+              <h3 class="text-lg font-semibold">Recommendation System</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="chip bg-indigo-500/10 text-indigo-300 border-indigo-400/20">MongoDB</span>
+                <span class="chip bg-emerald-500/10 text-emerald-300 border-emerald-400/20">Redis</span>
+                <span class="chip bg-violet-500/10 text-violet-300 border-violet-400/20">CF</span>
+              </div>
+              <p class="mt-3 text-white/80">Collaborative filtering + MongoDB & Redis caching; full-stack demo.</p>
+              <a class="mt-4 inline-block text-sm text-cyan-300 hover:underline" target="_blank" href="https://github.com/Hitha99/RecommendationSystem">Repository →</a>
+            </article>
+            <!-- 3 -->
+            <article class="rounded-3xl p-6 border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:shadow-xl ring-1 ring-transparent hover:ring-2 hover:ring-violet-400/60">
+              <h3 class="text-lg font-semibold">Hybrid Self-RAG</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="chip bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-400/20">RAG</span>
+                <span class="chip bg-sky-500/10 text-sky-300 border-sky-400/20">Wikipedia</span>
+                <span class="chip bg-purple-500/10 text-purple-300 border-purple-400/20">arXiv</span>
+              </div>
+              <p class="mt-3 text-white/80">Wikipedia + arXiv retrieval; FactScore validation (0.65→0.87).</p>
+              <a class="mt-4 inline-block text-sm text-cyan-300 hover:underline" target="_blank" href="https://github.com/Hitha99/Hybrid-Self-RAG">Repository →</a>
+            </article>
+            <!-- 4 -->
+            <article class="rounded-3xl p-6 border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:shadow-xl ring-1 ring-transparent hover:ring-2 hover:ring-emerald-400/60">
+              <h3 class="text-lg font-semibold">Generator Matrix Optimization</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="chip bg-amber-500/10 text-amber-300 border-amber-400/20">LP</span>
+                <span class="chip bg-rose-500/10 text-rose-300 border-rose-400/20">GA</span>
+                <span class="chip bg-sky-500/10 text-sky-300 border-sky-400/20">SA</span>
+              </div>
+              <p class="mt-3 text-white/80">LP + GA + SA; −15% m-height; −38% latency.</p>
+              <a class="mt-4 inline-block text-sm text-cyan-300 hover:underline" target="_blank" href="https://github.com/Hitha99/Generator-Matrix-Optimization">Repository →</a>
+            </article>
+            <!-- 5 -->
+            <article class="rounded-3xl p-6 border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:shadow-xl ring-1 ring-transparent hover:ring-2 hover:ring-fuchsia-400/60">
+              <h3 class="text-lg font-semibold">Multimodal Network · Calorie Prediction</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="chip bg-indigo-500/10 text-indigo-300 border-indigo-400/20">Bi-LSTM</span>
+                <span class="chip bg-emerald-500/10 text-emerald-300 border-emerald-400/20">CNN</span>
+                <span class="chip bg-sky-500/10 text-sky-300 border-sky-400/20">PyTorch</span>
+              </div>
+              <p class="mt-3 text-white/80">Bi-LSTM + CNN over CGM time-series, neural signals & meal images.</p>
+              <a class="mt-4 inline-block text-sm text-cyan-300 hover:underline" target="_blank" href="https://github.com/Hitha99/Multimodal-Network">Repository →</a>
+            </article>
+            <!-- 6 -->
+            <article class="rounded-3xl p-6 border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:shadow-xl ring-1 ring-transparent hover:ring-2 hover:ring-sky-400/60">
+              <h3 class="text-lg font-semibold">LoRA Driving Instructor (DistilGPT2)</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="chip bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-400/20">LoRA</span>
+                <span class="chip bg-indigo-500/10 text-indigo-300 border-indigo-400/20">DistilGPT2</span>
+                <span class="chip bg-sky-500/10 text-sky-300 border-sky-400/20">NLP</span>
+              </div>
+              <p class="mt-3 text-white/80">LoRA-fine-tuned DistilGPT2 for driving/navigation instructions.</p>
+              <a class="mt-4 inline-block text-sm text-cyan-300 hover:underline" target="_blank" href="https://github.com/Hitha99/LoRA-Driving-Instructor">Repository →</a>
+            </article>
+          </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight grad-text">Skills</h2>
+          <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
+            <div class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-cyan-400/60 transition">
+              <h3 class="font-semibold">Languages & Frameworks</h3>
+              <p class="mt-2 text-white/80">C++, Java, Python, C, JavaScript/TypeScript, HTML/CSS, Spring Boot, Node.js, Django, Flask</p>
+            </div>
+            <div class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-indigo-400/60 transition">
+              <h3 class="font-semibold">Tools & Platforms</h3>
+              <p class="mt-2 text-white/80">AWS, Docker, Kubernetes, Linux/Unix, Terraform, Jenkins, Jira, Splunk</p>
+            </div>
+            <div class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-pink-400/60 transition">
+              <h3 class="font-semibold">Databases & Other</h3>
+              <p class="mt-2 text-white/80">MongoDB, SQL, PostgreSQL, DynamoDB, S3, OpenSearch/Elasticsearch, NLP/ML, PyTorch, TensorFlow</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight grad-text">Education</h2>
+          <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-cyan-400/60 transition">
+              <h3 class="text-lg font-semibold">Texas A&amp;M University</h3>
+              <p class="text-white/80">Master of Computer Science — GPA 3.6/4.0</p>
+              <p class="text-xs text-white/60 mt-1">Aug 2024 – May 2026 · College Station, TX</p>
+            </div>
+            <div class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-indigo-400/60 transition">
+              <h3 class="text-lg font-semibold">JSS Science and Technology University</h3>
+              <p class="text-white/80">B.E. in Computer Science — GPA 3.8/4.0</p>
+              <p class="text-xs text-white/60 mt-1">Aug 2017 – Jul 2021 · Mysuru, India</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section id="achievements" class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight grad-text">Certifications & Achievements</h2>
+          <ul class="mt-8 grid md:grid-cols-2 gap-6 text-white/80">
+            <li class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-emerald-400/60 transition">Innovation Award by AWM @ JPMorgan for modernization (Jul 2024).</li>
+            <li class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-amber-400/60 transition">Won JPMorgan SEPATHON: high-throughput S3 media transfer (Jul 2022).</li>
+            <li class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-sky-400/60 transition">AWS Cloud Practitioner (Jul 2022).</li>
+          </ul>
+        </section>
+
+        <section id="whyhire" class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight grad-text">Why Hire Me</h2>
+          <div class="mt-6 grid md:grid-cols-2 gap-6">
+            
+            <div class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-cyan-400/60 transition">
+              <h3 class="text-lg font-semibold">Proven Industry Experience</h3>
+              <p class="mt-2 text-white/80">
+                Over two years at <span class="text-white">J.P. Morgan Chase</span>, modernizing large-scale systems, 
+                optimizing cloud infrastructure with AWS, and improving search performance with Elasticsearch for 
+                1M+ records and thousands of users.
+              </p>
+            </div>
+        
+            <div class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-pink-400/60 transition">
+              <h3 class="text-lg font-semibold">Strong Technical Toolkit</h3>
+              <p class="mt-2 text-white/80">
+                Skilled in <span class="text-white">Java, Spring Boot, AWS, Docker, Kubernetes, and distributed systems</span>, 
+                with a strong foundation in system design, performance tuning, and backend engineering.
+              </p>
+            </div>
+        
+            <div class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-indigo-400/60 transition">
+              <h3 class="text-lg font-semibold">Academic & Research Depth</h3>
+              <p class="mt-2 text-white/80">
+                Graduate student at <span class="text-white">Texas A&amp;M University</span>, with advanced coursework in 
+                <span class="text-white">AI, ML, NLP, and Generative AI</span>. Actively exploring RAG, multimodal learning, 
+                and deep learning for time-series and image data.
+              </p>
+            </div>
+        
+            <div class="rounded-3xl p-6 border border-white/10 bg-white/5 hover:ring-2 ring-transparent hover:ring-emerald-400/60 transition">
+              <h3 class="text-lg font-semibold">Passion for Innovation</h3>
+              <p class="mt-2 text-white/80">
+                I thrive on solving complex problems with data-driven solutions - from building real-time WebRTC apps 
+                with secure payments to exploring fairness and optimization in AI research. I bring curiosity, 
+                adaptability, and a drive to deliver impact.
+              </p>
+            </div>
+        
+          </div>
+        </section>
+        
+
+        <!-- CONTACT -->
+        <section id="contact" class="reveal">
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight grad-text">Contact</h2>
+          <p class="mt-4 text-white/80">Best way to reach me is email. I’m open to full-time SWE roles (distributed systems, platform, ML/infra) and internships.</p>
+          <div class="mt-5 flex flex-wrap gap-3 text-sm">
+            <a class="rounded-xl px-3 py-2 border border-white/15 hover:border-cyan-400/60" href="mailto:hithavgowder@gmail.com">hithavgowder@gmail.com</a>
+            <a class="rounded-xl px-3 py-2 border border-white/15 hover:border-indigo-400/60" href="tel:+19793447132">+1 (979) 344-7132</a>
+            <a class="rounded-xl px-3 py-2 border border-white/15 hover:border-pink-400/60" target="_blank" href="https://www.linkedin.com/in/hitha-magadi-vijayanand-68143b1b5/">LinkedIn</a>
+            <a class="rounded-xl px-3 py-2 border border-white/15 hover:border-sky-400/60" target="_blank" href="https://github.com/Hitha99">GitHub</a>
+          </div>
+        </section>
+
+        <footer class="py-8 text-sm text-white/60">
+          © <span id="y"></span> Hitha Magadi Vijayanand
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <!-- Scroll-spy + reveal -->
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // reveal on scroll
+    const rev = new IntersectionObserver((ents)=>{
+      ents.forEach(e => { if(e.isIntersecting){ e.target.classList.add('show'); rev.unobserve(e.target); }});
+    }, { threshold:.12 });
+    document.querySelectorAll('.reveal').forEach(el => rev.observe(el));
+
+    // scroll-spy
+    const links = [...document.querySelectorAll('#sideNav a')];
+    const sections = links.map(a => document.querySelector(a.getAttribute('href')));
+    const spy = new IntersectionObserver((ents)=>{
+      ents.forEach(ent => {
+        if(ent.isIntersecting){
+          const id = '#' + ent.target.id;
+          links.forEach(a => a.classList.toggle('active-link', a.getAttribute('href')===id));
+        }
+      });
+    }, { rootMargin: '-35% 0% -60% 0%', threshold: [.1]});
+    sections.forEach(s => s && spy.observe(s));
+  </script>
+</body>
+</html>
